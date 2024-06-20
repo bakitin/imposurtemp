@@ -1,0 +1,178 @@
+/****ANIMACIONES****/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeBackground {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0.2;}
+}
+
+body::after {
+    animation: fadeBackground 4s ease-in-out;
+}
+
+body > * {
+    animation: fadeIn 2s ease-in-out 2s forwards; 
+    visibility: hidden; 
+    animation-fill-mode: forwards;
+}
+
+div {
+    animation: fadeIn 2s ease-in-out 2s forwards; 
+    animation-fill-mode: forwards;
+}
+/* Estilos para el fondo animado */
+body::after {
+    content: "";
+    background-image: url('../Logosuniversales/ANIMADO GIF.gif');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: center;
+    background-attachment: absolute;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+body.noAfter::after {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #22b8f0;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    position: static;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    flex-shrink: 0;
+}
+
+
+/*Estilo para botones*/
+#inicio_boton{
+    background-color: #9fd11f;
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;
+    margin: 1em;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    width: 9em;
+    height: 3em;
+}
+
+/* Estilos generales */
+.container-fluid {
+    flex-grow: 1;
+}
+
+/*Estilo para los textos*/
+.mini_texto{
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.sub_titulos{
+    color: #9fd11f;
+}
+
+h1{
+    color: #29A4DA;
+}
+
+#pa_arriba{
+    padding-top: 1em;
+}
+
+#inicio_boton:hover{
+    background-color: #29A4DA;
+    color: #f8f9fa;
+}
+
+*{
+    font-family: 'inter', sans-serif;
+}
+
+#icono_impo_valores{
+    width: 5em;
+    height: auto;
+}
+/*Estilo para el cambio de resolucion*/
+@media (min-width: 768px) {
+    #fondogrande{
+        background-image: url('../Logosuniversales/Logo\ corazon.svg');
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 37em;
+        background-position: center;
+        background-attachment: absolute;
+        left: 10%;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -2;
+        animation: fadeBackground 4s ease-in-out;
+    }
+}
+
+
+/*****DISEÑO PAGINA PEQUEÑA*****/
+@media (max-width: px) {
+    #fondo{
+        background-image: url('../Logosuniversales/Imposur\ Logo.svg');
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 37em;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -2;
+    }
+}
+
+#icono_pequeño_de_valores{
+    width: 3em;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+/*Estilo para los textos*/
+.h2{
+    color: #9fd11f;
+}
+
+.titulo_pequeños{
+    font-size: 1em;
+    color: #9fd11f;
+}
