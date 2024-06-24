@@ -1,0 +1,487 @@
+/*ESTILOS GENERALES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+html {
+    box-sizing: border-box;
+  }
+  
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+*{
+    font-family: 'inter', sans-serif;
+}
+/*************************************/
+/*ANIMACIONES*/
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+*{
+    font-family: 'inter', sans-serif;
+}
+
+
+@keyframes fadeBackground {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0.2;}
+}
+
+body::after {
+    animation: fadeBackground 4s ease-in-out;
+}
+
+body > * {
+    animation: fadeIn 2s ease-in-out 2s forwards;
+    visibility: hidden; 
+}
+
+.colombia-container {
+    animation: fadeIn 2s ease-in-out 2s forwards;
+}
+
+body::after {
+    content: "";
+    background-image: url('img/Letras\ imposur.svg');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: top;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;   
+}
+ */
+
+/*FORMATO DE LA PAGINA*/
+.colombia-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colombia-container img:first-child {
+    position: relative;
+    z-index: 1;
+    width: 82%;
+    height: auto;
+}
+
+.colombia-container img {
+    width: 80%;
+    height: auto;
+}
+
+.colombia-container a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.colombia-container a:hover img {
+    transform: scale(1.2);
+}
+
+.inicio, .nosotros, .infraestructura, .productos, .contactos {
+    position: absolute;
+    z-index: 4;
+    background-color: #91B635;
+    color: #ffffff;
+    border: none;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    width: 21%;
+    height: 7%;
+}
+
+.inicio:hover, .nosotros:hover, .infraestructura:hover, .productos:hover, .contactos:hover {
+    background-color: #29A4DA; /* Cambia el color de fondo del botón cuando se pasa el mouse por encima */
+    color: #f8f9fa;
+}
+
+.inicio {
+    top: 50%;
+    left: 54.7%;
+}
+
+.nosotros {
+    top: 58%;
+    left: 54.7%;
+}
+
+.infraestructura {
+    top: 66%;
+    left: 54.7%;
+}
+
+.productos {
+    top: 74%;
+    left: 54.7%;
+}
+
+.contactos {
+    top: 82%;
+    left: 54.7%;
+}
+
+
+#barranquilla-icon {
+    position: absolute;
+    top: 7.3%;
+    left: 17%;
+    width: 8%;
+    height: auto;
+    z-index: 2;
+}
+
+#cali-icon {
+    position: absolute;
+    top: 47%;
+    left: 13.8%;
+    width: 8%;
+    height: auto;
+    z-index: 2;
+}
+
+#medellin-icon {
+    position: absolute;
+    top: 30.6%;
+    left: 15.99%;
+    width: 8%;
+    height: auto;
+    z-index: 2;
+}
+
+#pereira-icon {
+    position: absolute;
+    top: 38.5%;
+    left: 14.4%;
+    width: 8%;
+    height: auto;
+    z-index: 2;
+}
+
+#bucaramanga-icon{
+    position: absolute;
+    top: 28.4%;
+    left: 21.3%;
+    width: 8%;
+    height: auto;
+    z-index: 2;
+}
+
+
+/*************************************/
+/*Pantallas Mediana*/
+@media (max-width: 768px) {
+    /*************************************/
+    /*BOTONES DE CIUDADES*/
+    .barranquilla-buttom,.bucaramanga-buttom,.medellin-buttom,.pereira-buttom,.cali-buttom{
+        position: absolute;
+        background-color: #29A4DA;
+        color: #ffffff;
+        border: none;
+        padding: 0px 0px;
+        font-size: 30px;
+        font-weight: 700;
+        border-radius: 20px;
+        transition: background-color 0.0s ease, transform 0.3s ease;
+        width: 240px;
+        height: auto;
+    }
+    /*BOTONES DE CIUDADES*/
+    .barranquilla-buttom {
+        margin-left: 10em;
+        margin-top: 4em;
+    }
+    .bucaramanga-buttom {
+        margin-left: 12em;
+        margin-top: 9em;
+    }
+    .medellin-buttom {
+        margin-left: 11em;
+        margin-top: 13em;
+    }
+    .pereira-buttom {
+        margin-left: 7em;
+        margin-top: 16em;
+    }
+    .cali-buttom {
+        margin-left: 4em;
+        margin-top: 19em;
+    }
+
+    .barranquilla-buttom:active, .bucaramanga-buttom:active, .medellin-buttom:active, .pereira-buttom:active, .cali-buttom:active {
+        background-color: #91B635;
+        transform: scale(1.1);
+    }
+    /*************************************/
+    /*BOTONES DE NAVEGACION*/
+    .inicio-cell, .nosotros-cell, .infraestructura-cell, .productos-cell, .contacto-cell {
+        background-color: #91B635;
+        color: #ffffff;
+        border: none;
+        padding: 0px 0px;
+        font-size: 30px;
+        font-weight: 700;
+        border-radius: 20px;
+        transition: background-color 0.0s ease, transform 0.3s ease;
+        width: 294px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    #contenedor-botones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .inicio-cell:hover, .nosotros-cell:hover, .infraestructura-cell:hover, .productos-cell:hover, .contactos-cell:hover {
+        background-color: #29A4DA;
+        color: #f8f9fa;
+        transform: scale(1.1);
+    }
+
+
+    .contenedor-imagen {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .contenedor-imagen img {
+        width: 300%;
+        height: auto;
+        margin-left: -29em;
+        object-fit: cover;
+    }
+    
+    #resto-del-mundo-cell {
+        width: 43em;
+        height: auto;
+        padding-bottom: 20px;
+    }
+}
+/*************************************/
+/*Pantallas Pequeña*/
+@media (max-width: 425px) {
+    /*************************************/
+    /*BOTONES DE CIUDADES*/
+    .barranquilla-buttom,.bucaramanga-buttom,.medellin-buttom,.pereira-buttom,.cali-buttom{
+        position: absolute;
+        background-color: #29A4DA;
+        color: #ffffff;
+        border: none;
+        padding: 0px 0px;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 20px;
+        transition: background-color 0.0s ease, transform 0.3s ease;
+        width: 170px;
+        height: auto;
+        margin-top: 10px;
+    }
+    /*BOTONES DE CIUDADES*/
+    .barranquilla-buttom {
+        margin-left: 8em;
+        margin-top: 3em;
+    }
+    .bucaramanga-buttom {
+        margin-left: 11em;
+        margin-top: 8em;
+    }
+    .medellin-buttom {
+        margin-left: 9em;
+        margin-top: 12em;
+    }
+    .pereira-buttom{
+        margin-left: 11em;
+        margin-top: 16em;
+    }
+    .cali-buttom{
+        margin-left: 11em;
+        margin-top: 20em;
+    }
+
+    .barranquilla-buttom:active, .bucaramanga-buttom:active, .medellin-buttom:active, .pereira-buttom:active, .cali-buttom:active {
+        background-color: #91B635;
+        transform: scale(1.1);
+    }
+    /*************************************/
+    /*BOTONES DE NAVEGACION*/
+    .inicio-cell, .nosotros-cell, .infraestructura-cell, .productos-cell, .contacto-cell {
+        /* position: absolute; */
+        background-color: #91B635;
+        color: #ffffff;
+        border: none;
+        padding: 0px 0px;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 20px;
+        transition: background-color 0.0s ease, transform 0.3s ease;
+        width: 170px;
+        height: auto;
+        margin-left: 1em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #contenedor-botones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .inicio-cell:active, .nosotros-cell:active, .infraestructura-cell:active, .productos-cell:active, .contactos-cell:active {
+        background-color: #29A4DA;
+        color: #f8f9fa;
+        transform: scale(1.1);
+    }
+
+    .contenedor-imagen {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .contenedor-imagen img {
+        width: 300%;
+        height: auto;
+        margin-left: -15em;
+        object-fit: cover;
+    }
+    
+    #resto-del-mundo-cell {
+        width: 22em;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+}
+/*Pantallas semi pequeñas*/
+@media (max-width: 375px){
+    /*BOTONES DE CIUDADES*/
+    .barranquilla-buttom {
+        margin-left: 10em;
+        margin-top: 4em;
+    }
+    .bucaramanga-buttom {
+        margin-left: 12em;
+        margin-top: 9em;
+    }
+    .medellin-buttom {
+        margin-left: 12em;
+        margin-top: 13em;
+    }
+    .pereira-buttom {
+        margin-left: 7em;
+        margin-top: 17em;
+    }
+    .pereira-buttom {
+        margin-left: 7em;
+        margin-top: 17em;
+    }
+    .cali-buttom {
+        margin-left: 4em;
+        margin-top: 20em;
+    }
+    #resto-del-mundo-cell {
+        width: 24em;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .contenedor-imagen img {
+        width: 300%;
+        height: auto;
+        margin-left: -17em;
+        object-fit: cover;
+    }
+}
+/*Pantallas extra pequeñas*/
+@media (max-width: 320px){
+    /*BOTONES DE CIUDADES*/
+    .barranquilla-buttom {
+        margin-left: 10em;
+        margin-top: 4em;
+    }
+    .bucaramanga-buttom {
+        margin-left: 12em;
+        margin-top: 9em;
+    }
+    .medellin-buttom {
+        margin-left: 12em;
+        margin-top: 13em;
+    }
+    .pereira-buttom {
+        margin-left: 7em;
+        margin-top: 17em;
+    }
+    .pereira-buttom {
+        margin-left: 7em;
+        margin-top: 17em;
+    }
+    .cali-buttom {
+        margin-left: 4em;
+        margin-top: 20em;
+    }
+    #resto-del-mundo-cell {
+        width: 24em;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .contenedor-imagen img {
+        width: 300%;
+        height: auto;
+        margin-left: -17em;
+        object-fit: cover;
+    }
+}
+#texto-separacion{
+    background-color: #91B635;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 5px;
+
+
+}
+
+
+/*************************************/
+/*Estilo para el footer*/
+footer {
+    background-color: #22b8f0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px;
+    position: static;
+    width: 100%;
+    flex-shrink: 0;
+}
